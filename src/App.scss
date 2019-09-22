@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+
+@font-face {
+  font-family: "Nikukyu";
+  src: url("./fonts/Nikukyu.TTF") format("eot"),
+    url("./fonts/Nikukyu.TTF") format("woff2"),
+    url("./fonts/Nikukyu.TTF") format("woff"),
+    url("./fonts/Nikukyu.TTF") format("truetype");
+}
+
+$reading-font: "Basier Circle", Helvetica, Arial;
+$theme-font: "Basier Circle", Helvetica, Arial;
+
+$theme-color: #6200ee;
+$theme-secondary: #03dac6;
+$theme-light: #9c9cff;
+
+$text-color-one: #212529;
+$text-color-two: #383838;
+$text-color-three: #7c7c7c;
+$text-color-four: #cecece;
+
+.landing__grade-picker-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.landing__grade-picker-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+%box-shadow {
+  box-shadow: 0px 6px 25px rgba(100, 100, 100, 0.18);
+}
+%box-shadow-even-medium {
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.18);
+}
+
+%box-shadow-raise {
+  box-shadow: 0px 6px 30px rgba(178, 178, 178, 0.5);
+}
+
+%theme-button-gradient {
+  background-image: linear-gradient(to right, $theme-color, $theme-secondary);
+}
+
+%theme-button {
+  padding: 20px;
+  margin-top: 20px;
+  min-width: 152px;
+  min-height: 63px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+  @extend %box-shadow-raise;
+  background-image: linear-gradient(to right, $theme-color, $theme-secondary);
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-family: $theme-font;
+  cursor: pointer;
+  &:hover {
+    @extend %box-shadow-raise;
+    transition-duration: 0.3s;
+  }
+}
+
+.search-word-button {
+  @extend %theme-button;
+}
+
+.landing__grade-picker {
+  @extend %theme-button-gradient;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @extend %box-shadow;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 48px;
+  display: block;
+  margin: 0 auto;
+  // margin-top: 100px;
+  max-width: 450px;
+  border-radius: 10px;
+  text-align: left;
+  border: none;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
+  //   margin-top: 100px;
+
+  @media (max-width: 450px) {
+    border-radius: 10px;
+    margin-top: 15px;
+    // margin-top: 0px;
+  }
+
+  @media (max-width: 300px) {
+    margin-top: 20px;
+    // margin-top: 0px;
+  }
+}
+
+.landing__grade-picker-select {
+  font-family: $reading-font;
+  font-size: 24px;
+  line-height: 36px;
+  color: $text-color-one;
+  text-align: left;
+  appearance: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding-left: 40%;
+  cursor: pointer;
+  outline: none;
+  line-height: 100px;
+  width: 100%;
+  //   background: url("/static/icons/chevron-down-white.svg") no-repeat 95% 23px;
+  background-size: 58px 58px;
+  border-radius: 10px;
+  border: none;
+
+  option {
+    color: $text-color-two;
+    padding: 5px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 22px;
+
+    padding-left: 20px;
+    background-size: 38px 38px;
+    background-position: 95% 27px;
+    line-height: 90px;
+  }
+
+  @media (max-width: 330px) {
+    line-height: 60px;
+    font-size: 20px;
+    background-position: 95% 12px;
+  }
+}
+
+%theme-input {
+  font-family: $theme-font;
+  font-size: 20px;
+  color: black;
+  outline: none;
+  padding: 14px;
+  padding-left: 12px;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 93%;
+  border: 1px solid #f0f0f0 !important;
+  border-radius: 6px;
+  box-shadow: 0px 6px 30px rgba(193, 193, 193, 0.2);
+  -webkit-appearance: none;
+}
+
+%theme-input-block-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 3px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  display: block;
+}
+
+.search-input {
+  @extend %theme-input;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input-wrapper {
+  width: 400px;
+  margin: auto;
+  //   @extend %box-shadow;
+  margin-top: 170px;
+}
+
+.word-card {
+  @extend %box-shadow;
+  width: 400px;
+  border-radius: 6px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #f4efef;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  box-sizing: border-box;
+  min-height: 164px;
+  cursor: pointer;
+}
+
+.word-card:hover {
+  @extend %box-shadow-raise;
+}
+
+.header-kanji {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    @extend %box-shadow;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    font-family: "Nikukyu";
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 40px;
+  }
+
+  li a:hover {
+    color: $theme-color;
+  }
+  img {
+    width: 60px;
+    margin: auto;
+    // margin-left: 260px;
+    margin-top: 5px;
+  }
+}
